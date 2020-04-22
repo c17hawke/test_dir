@@ -1,0 +1,845 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.1">
+    
+    
+      
+        <title>Test</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.a676eddb.min.css">
+      
+        <link rel="stylesheet" href="assets/stylesheets/palette.b302131d.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ef5350">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="red" data-md-color-accent="red">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#part-i-activation-function" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="." title="Test" class="md-header-nav__button md-logo" aria-label="Test">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Test
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Getting Started
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Test" class="md-nav__button md-logo" aria-label="Test">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    Test
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Getting Started
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="." title="Getting Started" class="md-nav__link md-nav__link--active">
+      Getting Started
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#01-sigmoid" class="md-nav__link">
+    01. Sigmoid
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#02-hard-sigmoid" class="md-nav__link">
+    02. Hard sigmoid
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#03-relu" class="md-nav__link">
+    03. ReLU
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#04-elu" class="md-nav__link">
+    04. ELU
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#05-selu" class="md-nav__link">
+    05. SELU
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#06-tanh" class="md-nav__link">
+    06. Tanh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#07-softsign" class="md-nav__link">
+    07. Softsign
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#08-softplus" class="md-nav__link">
+    08. Softplus
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#09-leakyrelu" class="md-nav__link">
+    09. LeakyReLU
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-threshold-relu" class="md-nav__link">
+    10. Threshold Relu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-maxout" class="md-nav__link">
+    11. Maxout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-swish" class="md-nav__link">
+    12. Swish
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#softmax" class="md-nav__link">
+    Softmax
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#01-sigmoid" class="md-nav__link">
+    01. Sigmoid
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#02-hard-sigmoid" class="md-nav__link">
+    02. Hard sigmoid
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#03-relu" class="md-nav__link">
+    03. ReLU
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#04-elu" class="md-nav__link">
+    04. ELU
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#05-selu" class="md-nav__link">
+    05. SELU
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#06-tanh" class="md-nav__link">
+    06. Tanh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#07-softsign" class="md-nav__link">
+    07. Softsign
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#08-softplus" class="md-nav__link">
+    08. Softplus
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#09-leakyrelu" class="md-nav__link">
+    09. LeakyReLU
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-threshold-relu" class="md-nav__link">
+    10. Threshold Relu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-maxout" class="md-nav__link">
+    11. Maxout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-swish" class="md-nav__link">
+    12. Swish
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#softmax" class="md-nav__link">
+    Softmax
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
+<span class="c1"># plt.xkcd()</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">plot_graph</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> 
+               <span class="n">ALPHA</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> 
+               <span class="n">label_x</span> <span class="o">=</span> <span class="s2">&quot;x -&gt;&quot;</span><span class="p">,</span> <span class="n">label_y</span><span class="o">=</span><span class="s2">&quot;act(x) -&gt;&quot;</span><span class="p">,</span> 
+               <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+               <span class="n">LABEL</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="n">label_x</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="n">label_y</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">LABEL</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="n">ALPHA</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">LABEL</span><span class="p">);</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="n">ALPHA</span><span class="p">);</span>
+</code></pre></div>
+
+
+<h1 id="part-i-activation-function"><strong>PART I</strong> Activation Function</h1>
+<h2 id="01-sigmoid">01. Sigmoid</h2>
+<p><img alt="render" src="https://latex.codecogs.com/png.latex?%5Cdpi%7B100%7D%20%5CLARGE%20%7B%5Ccolor%7BGreenYellow%7D%20%5Cfrac%7B1%7D%7B1%20&plus;%20e%5E%7B-x%7D%7D%7D" /></p>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">))</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">plot_graph</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Sigmoid function&quot;</span><span class="p">,</span> 
+           <span class="n">LABEL</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$\sigma(x) = \frac</span><span class="si">{1}</span><span class="s2">{1 + e^{-x}}$&quot;</span><span class="p">)</span>
+<span class="c1"># plot_graph(x, sigmoid(x), title=&quot;Sigmoid function&quot;, )</span>
+</code></pre></div>
+
+
+<p><img alt="png" src="img/output_7_0.png" /></p>
+<hr />
+<h2 id="02-hard-sigmoid">02. Hard sigmoid</h2>
+<div>
+<div class="MathJax_Preview">\begin{align}
+hard\_sigmoid(x) = \left\{\begin{matrix}
+0 &amp; x &lt;-2.5\\  
+1 &amp; x&gt;2.5\\  
+0.2x + 0.5 &amp; x \in [-2.5, 2.5]
+\end{matrix}\right.
+\end{align}</div>
+<script type="math/tex; mode=display">\begin{align}
+hard\_sigmoid(x) = \left\{\begin{matrix}
+0 & x <-2.5\\  
+1 & x>2.5\\  
+0.2x + 0.5 & x \in [-2.5, 2.5]
+\end{matrix}\right.
+\end{align}</script>
+</div>
+<div class="codehilite"><pre><span></span><code>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">hard_sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_hard_sigmoid_def</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mf">2.5</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mf">2.5</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mf">0.2</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mf">0.5</span>
+
+    <span class="n">y</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+        <span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_hard_sigmoid_def</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">y</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">plot_graph</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">hard_sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Hard Sigmoid function&quot;</span><span class="p">);</span>
+</code></pre></div>
+
+
+<p><img alt="png" src="img/output_11_0.png" /></p>
+<hr />
+<h2 id="03-relu">03. ReLU</h2>
+<div>
+<div class="MathJax_Preview">\begin{align}
+ReLU(x)= max(x,0)
+\end{align}</div>
+<script type="math/tex; mode=display">\begin{align}
+ReLU(x)= max(x,0)
+\end{align}</script>
+</div>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">relu</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">plot_graph</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">relu</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;ReLU&quot;</span><span class="p">,</span> 
+           <span class="n">LABEL</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$ReLU(x)= max(x,0)$&quot;</span><span class="p">);</span>
+</code></pre></div>
+
+
+<p><img alt="png" src="img/output_14_0.png" /></p>
+<hr />
+<h2 id="04-elu">04. ELU</h2>
+<div>
+<div class="MathJax_Preview">\begin{align}
+elu(x, \alpha) = \left\{\begin{matrix}
+x &amp; x&gt;0\\ 
+\alpha * (e^{x} - 1) &amp; x \leq 0 
+\end{matrix}\right.
+\end{align}</div>
+<script type="math/tex; mode=display">\begin{align}
+elu(x, \alpha) = \left\{\begin{matrix}
+x & x>0\\ 
+\alpha * (e^{x} - 1) & x \leq 0 
+\end{matrix}\right.
+\end{align}</script>
+</div>
+<div>
+<div class="MathJax_Preview">\begin{align}
+\alpha\ = scaler\ slope\ of\ negative\ section
+\end{align}</div>
+<script type="math/tex; mode=display">\begin{align}
+\alpha\ = scaler\ slope\ of\ negative\ section
+\end{align}</script>
+</div>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">elu</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="n">alpha</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)))</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">plot_graph</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">elu</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;ELU&quot;</span><span class="p">);</span>
+</code></pre></div>
+
+
+<p><img alt="png" src="img/output_17_0.png" /></p>
+<hr />
+<h2 id="05-selu">05. SELU</h2>
+<div>
+<div class="MathJax_Preview">\begin{align}
+selu(x) = scale * elu(x, \alpha)
+\end{align}</div>
+<script type="math/tex; mode=display">\begin{align}
+selu(x) = scale * elu(x, \alpha)
+\end{align}</script>
+</div>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">selu</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="n">alpha</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)))</span> <span class="o">*</span> <span class="n">scale</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">plot_graph</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">selu</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;SELU&quot;</span><span class="p">,</span>
+           <span class="n">LABEL</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$selu(x) = scale * elu(x, \alpha)$&quot;</span><span class="p">);</span>
+</code></pre></div>
+
+
+<p><img alt="png" src="img/output_20_0.png" /></p>
+<hr />
+<h2 id="06-tanh">06. Tanh</h2>
+<div>
+<div class="MathJax_Preview">\begin{align}
+tanh(x) = \frac{(e^{x} - e^{-x})}{(e^{x} + e^{-x})}
+\end{align}</div>
+<script type="math/tex; mode=display">\begin{align}
+tanh(x) = \frac{(e^{x} - e^{-x})}{(e^{x} + e^{-x})}
+\end{align}</script>
+</div>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">tanh</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">plot_graph</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">tanh</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Hyperbolic Tangent&quot;</span><span class="p">,</span>
+           <span class="n">LABEL</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$tanh(x) = \frac{(e^</span><span class="si">{x}</span><span class="s2"> - e^{-x})}{(e^</span><span class="si">{x}</span><span class="s2"> + e^{-x})}$&quot;</span><span class="p">);</span>
+</code></pre></div>
+
+
+<p><img alt="png" src="img/output_23_0.png" /></p>
+<hr />
+<h2 id="07-softsign">07. Softsign</h2>
+<div>
+<div class="MathJax_Preview">\begin{align}
+softsign(x) = \frac{x}{|x| + 1}
+\end{align}</div>
+<script type="math/tex; mode=display">\begin{align}
+softsign(x) = \frac{x}{|x| + 1}
+\end{align}</script>
+</div>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">softsign</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">plot_graph</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">softsign</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Soft Sign&quot;</span><span class="p">,</span>
+           <span class="n">LABEL</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$softsign(x) = \frac</span><span class="si">{x}</span><span class="s2">{|x| + 1}$&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p><img alt="png" src="img/output_26_0.png" /></p>
+<hr />
+<h2 id="08-softplus">08. Softplus</h2>
+<div>
+<div class="MathJax_Preview">\begin{align}
+softplus(x)=log(e^{x}+1)
+\end{align}</div>
+<script type="math/tex; mode=display">\begin{align}
+softplus(x)=log(e^{x}+1)
+\end{align}</script>
+</div>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">softplus</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">plot_graph</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">softplus</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Softplus&quot;</span><span class="p">,</span>
+           <span class="n">LABEL</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$softplus(x)=log(e^</span><span class="si">{x}</span><span class="s2">+1)&quot;</span><span class="p">);</span>
+</code></pre></div>
+
+
+<p><img alt="png" src="img/output_29_0.png" /></p>
+<hr />
+<h2 id="09-leakyrelu">09. LeakyReLU</h2>
+<div>
+<div class="MathJax_Preview">\begin{align}
+leaky\_relu(x, \alpha) = \left\{\begin{matrix}
+x &amp; x\geq0\\ 
+\alpha x &amp; x \lt 0 
+\end{matrix}\right.
+\end{align}</div>
+<script type="math/tex; mode=display">\begin{align}
+leaky\_relu(x, \alpha) = \left\{\begin{matrix}
+x & x\geq0\\ 
+\alpha x & x \lt 0 
+\end{matrix}\right.
+\end{align}</script>
+</div>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">leaky_relu</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">x</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">alpha</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">plot_graph</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">leaky_relu</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Leaky ReLU&quot;</span><span class="p">);</span>
+</code></pre></div>
+
+
+<p><img alt="png" src="img/output_32_0.png" /></p>
+<hr />
+<h2 id="10-threshold-relu">10. Threshold Relu</h2>
+<div>
+<div class="MathJax_Preview">\begin{align}
+threshold\_relu(x, \theta) = \left\{\begin{matrix}
+x &amp; x \gt \theta\\ 
+\theta &amp; x \leq \theta 
+\end{matrix}\right.
+\end{align}</div>
+<script type="math/tex; mode=display">\begin{align}
+threshold\_relu(x, \theta) = \left\{\begin{matrix}
+x & x \gt \theta\\ 
+\theta & x \leq \theta 
+\end{matrix}\right.
+\end{align}</script>
+</div>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">threshold_relu</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">theta</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="n">theta</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">theta</span><span class="p">)</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">plot_graph</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">threshold_relu</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Threshold ReLU&quot;</span><span class="p">);</span>
+</code></pre></div>
+
+
+<p><img alt="png" src="img/output_35_0.png" /></p>
+<hr />
+<h2 id="11-maxout">11. Maxout</h2>
+<hr />
+<h2 id="12-swish">12. Swish</h2>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">swish</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">_sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">plot_graph</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">swish</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Swish&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p><img alt="png" src="img/output_39_0.png" /></p>
+<hr />
+<h2 id="softmax">Softmax</h2>
+<div>
+<div class="MathJax_Preview">\begin{align}
+p_k = softmax(z)_k = \frac{e^{z_k}}{\sum_{j=1}^{j=K}e^{z_j}}
+\end{align}</div>
+<script type="math/tex; mode=display">\begin{align}
+p_k = softmax(z)_k = \frac{e^{z_k}}{\sum_{j=1}^{j=K}e^{z_j}}
+\end{align}</script>
+</div>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th align="center">symbol</th>
+<th align="center">meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">k</td>
+<td align="center"><span><span class="MathJax_Preview">k^{th}</span><script type="math/tex">k^{th}</script></span> class</td>
+</tr>
+<tr>
+<td align="center">K</td>
+<td align="center">K no. of classes</td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">p_k</span><script type="math/tex">p_k</script></span></td>
+<td align="center">proba. that instance belong to <span><span class="MathJax_Preview">k^{th}</span><script type="math/tex">k^{th}</script></span> class</td>
+</tr>
+</tbody>
+</table>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">softmax</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">/</span><span class="nb">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">data</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">plot_graph</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">softmax</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="err">[3.7702947552292645e-10, 4.614360944651457e-10, 5.647390538363874e-10, 6.911687290039416e-10, 8.459025610283457e-10, 1.0352770788480414e-09, 1.2670473874498868e-09, 1.5507047483654598e-09, 1.8978652577808946e-09, 2.3227455390772242e-09, 2.8427449299596202e-09, 3.4791580054100983e-09, 4.2580466151006775e-09, 5.211307146205107e-09, 6.377976717252612e-09, 7.80583179316895e-09, 9.553344686635031e-09, 1.1692078066750944e-08, 1.4309615532897714e-08, 1.751314826417752e-08, 2.1433864621864873e-08, 2.6232322464153233e-08, 3.210502417568443e-08, 3.9292463666905155e-08, 4.808897487715875e-08, 5.8854785089075336e-08, 7.203076665139143e-08, 8.815649121026662e-08, 1.0789232579070012e-07, 1.320464755880721e-07, 1.6160808090332472e-07, 1.9778772357946008e-07, 2.4206700172466524e-07, 2.962592028641672e-07, 3.6258356015638823e-07, 4.437561325511226e-07, 5.431010305370568e-07, 6.64686542301323e-07, 8.134917348243602e-07, 9.956103524171359e-07, 1.2185003625810541e-06, 1.491289368381424e-06, 1.825148394323547e-06, 2.2337493526942496e-06, 2.7338249241433775e-06, 3.345853780260961e-06, 4.094899208805175e-06, 5.011635484251619e-06, 6.133604014722144e-06, 7.506750705959118e-06, 9.187307499173531e-06, 1.1244095133912657e-05, 1.3761341436743205e-05, 1.6842130547923253e-05, 2.061262433587435e-05, 2.5227228871246985e-05, 3.087491753365241e-05, 3.778696968957722e-05, 4.6246441849268766e-05, 5.659975915739356e-05, 6.9270901902383e-05, 8.477876799839266e-05, 0.00010375842245354131, 0.00012698710401467118, 0.00015541605399073356, 0.00019020947068184197, 0.0002327921846428017, 0.0002849080071381617, 0.0003486911412253416, 0.0004267535798320687, 0.0005222920698802373, 0.0006392190227604585, 0.0007823227320922742, 0.0009574634598721453, 0.0011718134209632186, 0.0014341504935685813, 0.0017552176834707616, 0.0021481630625127582, 0.0026290781973090016, 0.0032176571174631135, 0.003938002808801287, 0.00481961425844951, 0.0058985944723895555, 0.007219128935206099, 0.008835295056657342, 0.010813276703994113, 0.01323407450768015, 0.016196822930660573, 0.019822849938991242, 0.024260645522025094, 0.02969194252878999, 0.03633915883782225, 0.04447450562589664, 0.05443113472976735, 0.06661678159824051, 0.08153046252920995, 0.09978290996277277, 0.12212158267925462, 0.14946127509861257, 0.18292157916733134]</span>
+</code></pre></div>
+
+
+<p><img alt="png" src="img/output_42_1.png" /></p>
+<div class="codehilite"><pre><span></span><code><span class="n">plot_graph</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="n">softmax</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">)))</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="err">[0.023163658230010892, 0.46525451265498363, 0.46525451265498363, 0.023163658230010892, 0.023163658230010892]</span>
+</code></pre></div>
+
+
+<p><img alt="png" src="img/output_43_1.png" /></p>
+<div class="codehilite"><pre><span></span><code><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">/</span><span class="nb">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">arr</span><span class="p">)),</span> <span class="mi">7</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">arr</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span><span class="o">/</span><span class="nb">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">arr</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="k">[1 2 3 4]</span>
+<span class="k">[0.0320586, 0.0871443, 0.2368828, 0.6439143]</span>
+<span class="k">[0.0320586  0.08714432 0.23688282 0.64391426]</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/vendor.c51dfa35.min.js"></script>
+      <script src="assets/javascripts/bundle.eaaa3931.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: ".",
+          features: [],
+          search: Object.assign({
+            worker: "assets/javascripts/worker/search.58d22e8e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
