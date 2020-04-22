@@ -1,0 +1,9 @@
+site_name: Test
+nav:
+  - Getting Started: index.md
+theme:
+  name: "material"
+  palette:
+    primary: "red"
+markdown_extensions:
+  - codehilite
